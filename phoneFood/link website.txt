@@ -1,0 +1,6 @@
+index -> http://www2.comp.polyu.edu.hk/~16094653d/comp2121/assignment2/index.php
+login -> http://www2.comp.polyu.edu.hk/~16094653d/comp2121/assignment2/login.php
+signup -> http://www2.comp.polyu.edu.hk/~16094653d/comp2121/assignment2/signup.php
+confirm order -> http://www2.comp.polyu.edu.hk/~16094653d/comp2121/assignment2/confirm_order.php
+signout -> http://www2.comp.polyu.edu.hk/~16094653d/comp2121/assignment2/signout.php -> redirect to http://www2.comp.polyu.edu.hk/~16094653d/comp2121/assignment2/index.php
+t&c -> http://www2.comp.polyu.edu.hk/~16094653d/comp2121/assignment2/tnc.php
