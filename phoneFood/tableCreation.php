@@ -6,7 +6,7 @@
         username VARCHAR(30) NOT NULL,
         fullname VARCHAR(30) NOT NULL,
         email VARCHAR(90) NOT NULL,
-        passwords VARCHAR(30) NOT NULL,
+        password VARCHAR(30) NOT NULL,
         phonenumber VARCHAR(30) NOT NULL
     )";
 

@@ -41,7 +41,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                 <?php
-                    if(!isset($_SESSION['users_id'])){
+                    if(!isset($_SESSION['userID'])){
                         #code
                         echo('<li><a href="/comp2121/assignment2/phoneFood/signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>');
                         echo('<li><a href="/comp2121/assignment2/phoneFood/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>');

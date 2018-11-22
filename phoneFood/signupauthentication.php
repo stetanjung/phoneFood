@@ -1,4 +1,5 @@
 <?php
+    include('connection.php');
     session_start();
     //required field names
     $required = array('fullname', 'username', 'email', 'phone', 'pass', 're_pass');
@@ -22,10 +23,17 @@
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             echo("<script>alert('Invalid email format');window.location.href='/comp2121/assignment2/phoneFood/signup.php';</script>");
         }
-        if(!$password){
-            echo("<script>alert('Password doesn't match');window.location.href='/comp2121/assignment2/phoneFood/signup.php';</script>");
+        else if(!$password){
+            echo("<script>alert('Password does not match');window.location.href='/comp2121/assignment2/phoneFood/signup.php';</script>");
         }
-        echo($password);
-        //header( "Location: /comp2121/assignment2/phoneFood" );
+        $existUserQuery = "select userID from user where username = '$username'";
+        $existUser = mysqli_fetch_array(mysqli_query($con, $existUserQuery), MYSQLI_ASSOC);
+
+        if($existUser == null){
+            $insertUser = "insert into user (username, fullname, email, password, phonenumber) values ('$username', '$fullname', '$email', '$password', '$phone')";
+            mysqli_query($con, $insertUser);
+        }
+        include('connectionclose.php');
+        echo("<script>window.location.href=' /comp2121/assignment2/phoneFood'</script>");
     }
 ?>
