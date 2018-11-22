@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +27,7 @@
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure class="login-image"><img src="images/logo.png" alt="sing up image" height="314px" width="294px"></figure>
-                        <a href="signup.php" class="signup-image-link">Create an account</a>
+                        <a href="/comp2121/assignment2/phoneFood/signup.php" class="signup-image-link">Create an account</a>
                     </div>
 
                     <div class="signin-form">
