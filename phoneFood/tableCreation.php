@@ -39,4 +39,17 @@
             break;
         }
     }
+
+    $username = 'admin';
+    $fullname = 'admin';
+    $email = 'admin@admin.com';
+    $password = 'root';
+    $phone = '2364623646';
+    $insertAdmin = "insert into user (username, fullname, email, password, phonenumber) values ('$username', '$fullname', '$email', '$password', '$phone')";
+    $admin = mysqli_query($con, $insertAdmin);
+    if($admin === false){
+        echo("Admin cannot be inserted ".$mysqli_error($con));
+    }
+
+    include('connectionclose.php');
 ?>
