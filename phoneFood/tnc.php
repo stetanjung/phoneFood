@@ -1,9 +1,13 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
-
 <head></head>
-
 <body>
+    <?php
+        require('navbar.php');
+    ?>
     <h1>Website Terms and Conditions of Use</h1>
 
     <h2>1. Terms</h2>

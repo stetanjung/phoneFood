@@ -12,19 +12,19 @@
     }
 
     if($error){
-        echo("<script>alert('All fields are required.');window.location.href='/comp2121/assignment2/phoneFood/signup.php';</script>");
+        echo("<script>alert('All fields are required.');window.location.href='signup.php';</script>");
     }
     else{
         $fullname = $_POST['fullname'];
         $username = $_POST['username'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
-        $password = ($_POST['pass'] == $_POST['re_pass'] ? $_POST['pass'] : false);
+        $password = ($_POST['pass'] == $_POST['re_pass'] ? md5($_POST['pass']) : false);
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo("<script>alert('Invalid email format.');window.location.href='/comp2121/assignment2/phoneFood/signup.php';</script>");
+            echo("<script>alert('Invalid email format.');window.location.href='signup.php';</script>");
         }
         else if(!$password){
-            echo("<script>alert('Password does not match.');window.location.href='/comp2121/assignment2/phoneFood/signup.php';</script>");
+            echo("<script>alert('Password does not match.');window.location.href='signup.php';</script>");
         }
         $existUserQuery = "select userID from user where username = '$username'";
         $existUser = mysqli_fetch_array(mysqli_query($con, $existUserQuery), MYSQLI_ASSOC);
@@ -33,7 +33,10 @@
             $insertUser = "insert into user (username, fullname, email, password, phonenumber) values ('$username', '$fullname', '$email', '$password', '$phone')";
             mysqli_query($con, $insertUser);
         }
+        else{
+            echo("<script>alert('User is exist.');window.location.href='login.php'</script>");
+        }
         include('connectionclose.php');
-        echo("<script>alert('User is successfully created.');window.location.href=' /comp2121/assignment2/phoneFood'</script>");
+        echo("<script>alert('User is successfully created.');window.location.href='index.php'</script>");
     }
 ?>

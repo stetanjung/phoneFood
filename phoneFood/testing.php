@@ -10,16 +10,9 @@
     <title>Testing</title>
 </head>
 <body>
-    <?php
-        $pass = 'ste';
-        $repass = 'ste';
-        $password = ($pass == $repass ? $pass : false);
-        if(!$password){
-            echo('password beda');
-        }
-        else{
-            echo $pass;
-        }
-    ?>
+        <form action="testingProcess.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file"><br><br>
+        <input type="submit" value="submit" name="submit">
+        </form>
 </body>
 </html>

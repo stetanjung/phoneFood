@@ -1,71 +1,17 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Admin Page</title>
 </head>
 <body>
-    <!-- navigation bar -->
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/comp2121/assignment2/">Phone Food</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/comp2121/assignment2">Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Food<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Add</a></li>
-                            <li><a href="#">Remove</a></li>
-                            <li><a href="#">View</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Drink<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Add</a></li>
-                            <li><a href="#">Remove</a></li>
-                            <li><a href="#">View</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Order<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">View</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">User<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">View</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/comp2121/assignment2/signup.php"><span class="glyphicon glyphicon-user"></span> Sign
-                            Up</a></li>
-                    <li><a href="/comp2121/assignment2/login.php"><span class="glyphicon glyphicon-log-in"></span>
-                            Login</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/comp2121/assignment2/logout.php"><span class="glyphicon glyphicon-log-out"></span>
-                            Logout</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php
+        require('adminnavbar.php');
+    ?>
 </body>
 </html>
